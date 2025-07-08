@@ -50,18 +50,28 @@ main {
 /* Portada */
 #portada {
     display: flex;
+    flex-direction: column;
+    text-align: center;
     height: 600px;
     align-items: center;
 }
-#portada-texto {
-    flex: 3;
-    padding: 0 10px;
-    margin-left: 20px;
+
+@media(min-width: 768px) {
+    #portada {
+        flex-direction: row;
+        text-align: start;
+    }
+    #portada-texto {
+        flex: 3;
+        padding: 0 10px;
+        margin-left: 20px;
+    }
+    #portada-imagen {
+        flex: 1;
+        padding: 0 10px;
+    }    
 }
-#portada-imagen {
-    flex: 1;
-    padding: 0 10px;
-}
+
 #portada h1{
     font-size: 4rem;
 }
@@ -93,10 +103,17 @@ main {
 }
 #proyectos-container {
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
+    align-items: center;
     margin-top: 40px;
     padding: 0 10px;
     gap: 10px;
+}
+@media(min-width: 768px) {
+    #proyectos-container {
+        flex-direction: row;
+    }
 }
 .card {
     width: 350px;
@@ -146,6 +163,33 @@ a {
     color: #00f0ff;
 }.github-btn:hover {
     cursor: pointer;
+}
+
+/* Tecnologías utilizadas*/
+#tecnologias {
+    margin-top: 80px;
+}
+#tecnologias h2 {
+    text-align: center;
+    font-size: 2rem;
+}
+#tecnologias-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 40px;
+    margin-bottom: 100px;
+    text-align: center;
+}
+@media(min-width: 768px) {
+    #tecnologias-container {
+        flex-direction: row;
+    }
+}
+
+.tecnologia-detalle img {
+    width: 96px;
 }
 
 
