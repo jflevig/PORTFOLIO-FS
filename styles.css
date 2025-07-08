@@ -8,6 +8,7 @@
 /* Configuraciones iniciales para el fondo y fuente*/
 html {
     min-height: 100%;
+    overflow-y: scroll;
 }
 
 body {
@@ -21,7 +22,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 10px;
 }
@@ -43,13 +44,13 @@ header li svg:hover {
 
 /* Contenido Main */
 main {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
 /* Portada */
 #portada {
-    display: flex;
+    display: none;
     flex-direction: column;
     text-align: center;
     height: 600px;
@@ -58,6 +59,7 @@ main {
 
 @media(min-width: 768px) {
     #portada {
+        height: 400px;
         flex-direction: row;
         text-align: start;
     }
@@ -97,6 +99,9 @@ main {
 }
 
 /* Proyectos */
+#proyectos {
+    display: none;
+}
 #proyectos h2 {
     text-align: center;
     font-size: 2rem;
@@ -125,7 +130,7 @@ main {
     transition: 0.2s;
 }
 .card:hover {
-    box-shadow: 0 0 7px #00f0ff;
+    box-shadow: 0 0 12px #00f0ff;
 }
 .card-img img{
     width: 100%;
@@ -167,6 +172,7 @@ a {
 
 /* Tecnologías utilizadas*/
 #tecnologias {
+    display: none;
     margin-top: 80px;
 }
 #tecnologias h2 {
@@ -188,8 +194,14 @@ a {
     }
 }
 
+.tecnologia-detalle {
+    transition: transform 0.3s;
+}
 .tecnologia-detalle img {
     width: 96px;
+}
+.tecnologia-detalle:hover {
+    scale: 1.1;
 }
 
 
