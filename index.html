@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<html lang="es">
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Felipe Levi | Portafolio</title>
+    <title>Portafolio - Felipe Levi</title>
     <!-- CDN: Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,22 +11,12 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <!-- FontAwesome-->
-    <script
-      src="https://kit.fontawesome.com/d6b59b8560.js"
-      crossorigin="anonymous"
-    ></script>
-    <!-- CDN: jQuery-->
-    <script
-      src="https://code.jquery.com/jquery-3.7.1.min.js"
-      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-      crossorigin="anonymous"
-    ></script>
-    <!-- CSS Styles -->
     <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <div class="top-header">
       <h1>Felipe Levi</h1>
       <nav>
         <ul>
@@ -50,236 +40,198 @@
           </li>
         </ul>
       </nav>
+    </div>
+
+    <header class="header">
+        <div class="portada-contenedor">
+            <div class="portada">
+                <div id="portada-imagen">
+                    <div class="circulo">
+                        <img src="images/perfil_img.jpg" alt="foto de perfil" />
+                    </div>
+                </div>
+                <div class="portada-texto">
+                    <h1 class="nombre">Felipe Levi</h1>
+                    <p class="titulo">Desarrollador Full Stack</p>
+                </div>
+            </div>
+        </div>
+            
+        <nav class="nav-contenido">
+            <ul class="nav-links">
+                <li><a href="#about">Sobre mí</a></li>
+                <li><a href="#projects">Proyectos</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
     </header>
-    <main>
-      <section id="portada">
-        <div id="portada-imagen">
-          <div class="circulo">
-            <img src="images/perfil_img.jpg" alt="foto de perfil" />
-          </div>
-        </div>
-        <div id="portada-texto">
-          <h1>Felipe Levi</h1>
-          <h2>Desarrollador Web Full Stack</h2>
-          <p>
-            Estudié Ingeniería Civil Electrónica. Principalmente me he dedicado
-            a participar en proyectos de I+D e Inteligencia artificial. Me gusta
-            desarrollar soluciones con las nuevas tecnologías emergentes y esto
-            me llevó a hacer aplicaciones web.
-          </p>
-        </div>
-      </section>
-      <section id="proyectos">
+
+    <!-- ABOUT -->
+    <section id="about" class="section fade-in">
+        <h2>Sobre mí</h2>
+        <p class="description">
+            Soy Felipe Levi, desarrollador Full Stack Jr con formación en Ingeniería Civil Electrónica y experiencia en automatización industrial e I+D. En mis proyectos desarrollo un enfoque metódico y orientado a resultados. Manejo Python, Django, HTML, CSS, JavaScript y bases de datos SQL. Estoy construyendo mi camino en el desarrollo web, aportando calidad técnica y una fuerte motivación por crear soluciones de valor.
+        </p>
+    </section>
+
+    <!-- PROYECTOS -->
+    <section id="projects" class="section fade-in">
         <h2>Proyectos</h2>
-        <div id="proyectos-container">
-          <article class="card">
-            <div class="card-img">
-              <img src="images/galeria.png" alt="imagen de galeria" />
-            </div>
-            <div class="card-text">
-              <h3>Galería de Imágenes</h3>
-              <p class="descripcion">
-                Sitio web que muestra una colección de imágenes ampliables al
-                hacer clic sobre ellas y diseño responsivo para adaptarse a
-                distintos dispositivos
-              </p>
-              <a
-                href="https://github.com/jflevig/galeria-imagenes"
-                target="_blank"
-              >
-                <div class="github-btn">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
-                    <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
-                    <path
-                      d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
-                    />
-                  </svg>
-                  <p>Ver repositorio</p>
+
+        <div class="projects-container">
+
+            <!-- PROYECTO 1 -->
+            <div class="project-card">
+                <h3>Mini-X (Red Social)</h3>
+                <p>Mini-X es una aplicación web inspirada en redes sociales modernas, donde los usuarios pueden crear publicaciones, dar “me gusta” y dejar comentarios. El proyecto se centra en la experiencia de usuario y en la creación de una interfaz limpia y funcional. Está construido para practicar CRUD completos, relaciones entre modelos y diseño responsivo.</p>
+                <div class="tech-list">
+                    <span>
+                        <div class="tech-item">
+                            <svg width="14" height="14"><use xlink:href="./sprite.svg#html"></use></svg> 
+                            <p> HTML</p>
+                        </div>
+                    </span>
+                    <span>
+                        <div class="tech-item">
+                            <svg width="14" height="14"><use xlink:href="./sprite.svg#bootstrap"></use></svg> 
+                            <p> Bootstrap</p>
+                        </div>
+                    </span>
+                    <span>
+                        <div class="tech-item">
+                            <svg width="14" height="14"><use xlink:href="./sprite.svg#python"></use></svg> 
+                            <p> Python</p>
+                        </div>
+                    </span>
+                    <span>
+                        <div class="tech-item">
+                            <svg width="14" height="14"><use xlink:href="./sprite.svg#django"></use></svg> 
+                            <p> Django</p>
+                        </div>
+                    </span>
+                    <span>
+                        <div class="tech-item">
+                            <svg width="14" height="14"><use xlink:href="./sprite.svg#mysql"></use></svg> 
+                            <p> MySQL</p>
+                        </div>
+                    </span>
                 </div>
-              </a>
+                <a class="btn" href="https://github.com/jflevig/mini-x" target="_blank">
+                    <svg height="20" width="20"><use xlink:href="./sprite.svg#github"></use></svg>
+                    Repositorio
+                </a>
+                <a class="btn" href="https://mini-x.onrender.com" target="_blank">
+                    <svg height="20" width="20"><use xlink:href="./sprite.svg#play"></use></svg>
+                    Demo
+                </a>
             </div>
-          </article>
-          <article class="card">
-            <div class="card-img">
-              <img src="images/ciberseguridad.png" alt="imagen de galeria" />
-            </div>
-            <div class="card-text">
-              <h3>Ciberseguridad</h3>
-              <p class="descripcion">
-                Sitio informativo de ciberseguridad. Cuenta con tarjetas
-                interactivas, carruseles y cuestionario de ciberseguridad
-              </p>
-              <a href="https://github.com/jflevig/EVAMOD2" target="_blank">
-                <div class="github-btn">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
-                    <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
-                    <path
-                      d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
-                    />
-                  </svg>
-                  <p>Ver repositorio</p>
+
+            <!-- PROYECTO 2 -->
+            <div class="project-card">
+                <h3>Gestor de Productos</h3>
+                <p>El Gestor de Productos es una aplicación web creada con Django para administrar un catálogo de productos de forma sencilla. Permite registrar usuarios, crear y editar productos, y organizarlos mediante categorías y etiquetas. Incluye funciones de filtrado por caterorías y etiquetas, y una interfaz clara enfocada en la gestión básica de inventarios.</p>
+                <div class="tech-list">
+                    <span>
+                        <div class="tech-item">
+                            <svg width="14" height="14"><use xlink:href="./sprite.svg#html"></use></svg> 
+                            <p> HTML</p>
+                        </div>
+                    </span>
+                    <span>
+                        <div class="tech-item">
+                            <svg width="14" height="14"><use xlink:href="./sprite.svg#bootstrap"></use></svg> 
+                            <p> Bootstrap</p>
+                        </div>
+                    </span>
+                    <span>
+                        <div class="tech-item">
+                            <svg width="14" height="14"><use xlink:href="./sprite.svg#python"></use></svg> 
+                            <p> Python</p>
+                        </div>
+                    </span>
+                    <span>
+                        <div class="tech-item">
+                            <svg width="14" height="14"><use xlink:href="./sprite.svg#django"></use></svg> 
+                            <p> Django</p>
+                        </div>
+                    </span>
+                    <span>
+                        <div class="tech-item">
+                            <svg width="14" height="14"><use xlink:href="./sprite.svg#mysql"></use></svg> 
+                            <p> MySQL</p>
+                        </div>
+                    </span>
                 </div>
-              </a>
+                <a class="btn" href="https://github.com/jflevig/EVAMOD7" target="_blank">
+                    <svg height="20" width="20"><use xlink:href="./sprite.svg#github"></use></svg>
+                    Repositorio
+                </a>
+                <a class="btn" href="https://mini-x.onrender.com" target="_blank">
+                    <svg height="20" width="20"><use xlink:href="./sprite.svg#play"></use></svg>
+                    Demo
+                </a>
             </div>
-          </article>
-          <article class="card">
-            <div class="card-img">
-              <img src="images/gestor-tarea.png" alt="imagen de galeria" />
-            </div>
-            <div class="card-text">
-              <h3>Gestor de Tareas</h3>
-              <p class="descripcion">
-                Aplicación para gestionar tareas desarrollado en python y que se
-                ejecuta en la línea de comandos.
-              </p>
-              <a href="https://github.com/jflevig/EVAMOD3" target="_blank">
-                <div class="github-btn">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
-                    <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
-                    <path
-                      d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
-                    />
-                  </svg>
-                  <p>Ver repositorio</p>
+
+            <!-- PROYECTO 3 -->
+            <div class="project-card">
+                <h3>Galería de Imágenes</h3>
+                <p>Proyecto front-end centrado en diseño visual, donde se presenta una galería interactiva completamente construida con HTML, CSS y JavaScript. Destaca por su enfoque en estilos modernos, uso de animaciones suaves y un layout responsivo que se adapta de forma elegante a distintos tamaños de pantalla. Enfocado en fortalecer habilidades de diseño y maquetación web.</p>
+                <div class="tech-list">
+                    <span>
+                        <div class="tech-item">
+                            <svg width="14" height="14"><use xlink:href="./sprite.svg#html"></use></svg> 
+                            <p> HTML</p>
+                        </div>
+                    </span>
+                    <span>
+                        <div class="tech-item">
+                            <svg width="14" height="14"><use xlink:href="./sprite.svg#css"></use></svg> 
+                            <p> CSS</p>
+                        </div>
+                    </span>
+                    <span>
+                        <div class="tech-item">
+                            <svg width="14" height="14"><use xlink:href="./sprite.svg#javascript"></use></svg> 
+                            <p> JavaScript</p>
+                        </div>
+                    </span>
+                    <span>
+                        <div class="tech-item">
+                            <svg width="14" height="14"><use xlink:href="./sprite.svg#jquery"></use></svg> 
+                            <p> jQuery</p>
+                        </div>
+                    </span>
                 </div>
-              </a>
+                <a class="btn" href="https://github.com/jflevig/galeria-imagenes" target="_blank">
+                    <svg height="20" width="20"><use xlink:href="./sprite.svg#github"></use></svg>
+                    Repositorio
+                </a>
+                <a class="btn" href="https://jflevig.github.io/galeria-imagenes/" target="_blank">
+                    <svg height="20" width="20"><use xlink:href="./sprite.svg#play"></use></svg>
+                    Demo
+                </a>
             </div>
-          </article>
-          <article class="card">
-            <div class="card-img">
-              <img
-                src="images/gestor-biblioteca.webp"
-                alt="imagen de galeria"
-              />
-            </div>
-            <div class="card-text">
-              <h3>Gestor de Biblioteca</h3>
-              <p class="descripcion">
-                Aplicación en línea de comandos para gestionar libros en una
-                biblioteca.
-              </p>
-              <a href="https://github.com/jflevig/EVAMOD4" target="_blank">
-                <div class="github-btn">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
-                    <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
-                    <path
-                      d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
-                    />
-                  </svg>
-                  <p>Ver repositorio</p>
-                </div>
-              </a>
-            </div>
-          </article>
-          <article class="card">
-            <div class="card-img">
-              <img src="images/bd_tienda.jpg" alt="imagen de galeria" />
-            </div>
-            <div class="card-text">
-              <h3>Base de Datos MySQL</h3>
-              <p class="descripcion">
-                Creación de base de datos para tienda de artículos deportivos.
-              </p>
-              <a href="https://github.com/jflevig/EVAMOD5" target="_blank">
-                <div class="github-btn">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
-                    <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
-                    <path
-                      d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
-                    />
-                  </svg>
-                  <p>Ver repositorio</p>
-                </div>
-              </a>
-            </div>
-          </article>
-          <article class="card">
-            <div class="card-img">
-              <img src="images/HazTodo.png" alt="imagen de galeria" />
-            </div>
-            <div class="card-text">
-              <h3>Gestor de Tareas con Django</h3>
-              <p class="descripcion">
-                Lista de tareas con gestión de usuarios y uso de vistas CRUD, sin base de datos
-              </p>
-              <a href="https://github.com/jflevig/EVAMOD6" target="_blank">
-                <div class="github-btn">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
-                    <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
-                    <path
-                      d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
-                    />
-                  </svg>
-                  <p>Ver repositorio</p>
-                </div>
-              </a>
-            </div>
-          </article>
-          <article class="card">
-            <div class="card-img">
-              <img src="images/productos.png" alt="imagen de galeria"/>
-            </div>
-            <div class="card-text">
-              <h3>Gestor de Productos con Django</h3>
-              <p class="descripcion">
-                Aplicación de Gestión de Productos realizada con Django. Incluye Base de datos MySQL.
-              </p>
-              <a href="https://github.com/jflevig/EVAMOD7" target="_blank">
-                <div class="github-btn">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
-                    <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
-                    <path
-                      d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
-                    />
-                  </svg>
-                  <p>Ver repositorio</p>
-                </div>
-              </a>
-            </div>
-          </article>
+
         </div>
-      </section>
-      <section id="tecnologias">
-        <h2>Tecnologías Utilizadas</h2>
-        <div id="tecnologias-container">
-          <div class="tecnologia-detalle">
-            <img src="images/html.png" alt="html logo" />
-            <p><strong>HTML</strong></p>
-          </div>
-          <div class="tecnologia-detalle">
-            <img src="images/css.png" alt="html logo" />
-            <p><strong>CSS</strong></p>
-          </div>
-          <div class="tecnologia-detalle">
-            <img src="images/js.png" alt="html logo" />
-            <p><strong>JavaScript</strong></p>
-          </div>
-          <div class="tecnologia-detalle">
-            <img src="images/bootstrap.png" alt="html logo" />
-            <p><strong>Bootstrap</strong></p>
-          </div>
-          <div class="tecnologia-detalle">
-            <img src="images/jquery.png" alt="html logo" />
-            <p><strong>jQuery</strong></p>
-          </div>
-          <div class="tecnologia-detalle python">
-            <img
-              src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg"
-              alt="html logo"
-            />
-            <p><strong>Python</strong></p>
-          </div>
-          <div class="tecnologia-detalle">
-            <img src="images/mysql.png" alt="html logo" class="mysql" />
-            <p><strong>MySQL</strong></p>
-          </div>
-          <div class="tecnologia-detalle">
-            <img src="images/django.png" alt="html logo"/>
-            <p><strong>Django</strong></p>
-          </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contact" class="section fade-in">
+        <h2>Contacto</h2>
+        <p>¿Quieres hablar conmigo? Puedes escribirme aquí:</p>
+
+        <div class="contact-links">
+            <a href="mailto:correo@tucorreo.com" class="btn"><svg height="20" width="20"><use xlink:href="./sprite.svg#email"></use></svg>Email</a>
+            <a href="#" class="btn"><svg height="20" width="20"><use xlink:href="./sprite.svg#linkedin"></use></svg>LinkedIn</a>
+            <a href="#" class="btn"><svg height="20" width="20"><use xlink:href="./sprite.svg#github"></use></svg> GitHub</a>
         </div>
-      </section>
-    </main>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>Creado por Felipe Levi — 2025</p>
+    </footer>
+
     <script src="scripts.js"></script>
-  </body>
+</body>
 </html>

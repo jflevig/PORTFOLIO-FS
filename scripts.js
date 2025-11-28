@@ -1,8 +1,17 @@
-$(document).ready(function(){
-    console.log('Página cargada');
-    $('#portada').slideDown();
-    $('#portada').css('display', 'flex');
-    $('#portada').fadeIn(800);
-    $('#proyectos').fadeIn(1000);
-    $('#tecnologias').fadeIn(1200);
-})
+document.addEventListener("DOMContentLoaded", () => {
+
+    const faders = document.querySelectorAll(".fade-in");
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                }
+            });
+        },
+        { threshold: 0.2 }
+    );
+
+    faders.forEach(el => observer.observe(el));
+});
